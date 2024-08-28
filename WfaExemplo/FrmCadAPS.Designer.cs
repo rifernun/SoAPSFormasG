@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadAPS));
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPerimetro = new System.Windows.Forms.TextBox();
@@ -211,6 +212,7 @@
             this.ClientSize = new System.Drawing.Size(522, 215);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmCadAPS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

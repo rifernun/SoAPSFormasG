@@ -36,16 +36,19 @@
             // tmrSplash
             // 
             this.tmrSplash.Enabled = true;
-            this.tmrSplash.Interval = 2000;
+            this.tmrSplash.Interval = 1200;
             this.tmrSplash.Tick += new System.EventHandler(this.tmrSplash_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Constantia", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(101, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 59);
+            this.label1.Size = new System.Drawing.Size(302, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sistema APS";
             // 
@@ -53,8 +56,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
