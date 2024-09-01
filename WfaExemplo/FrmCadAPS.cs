@@ -125,64 +125,108 @@ namespace WfaExemplo
 
         private void cmbReto()
         {
-            FormaGeometrica trianguloR = new TR()
+            try
             {
-                BaseT = Convert.ToDouble(txtBase.Text),
-                AlturaT = Convert.ToDouble(txtAltura.Text)
-            };
-            cmbObjetos.Items.Add(trianguloR);
+                FormaGeometrica trianguloR = new TR()
+                {
+                    BaseT = Convert.ToDouble(txtBase.Text),
+                    AlturaT = Convert.ToDouble(txtAltura.Text)
+                };
+                cmbObjetos.Items.Add(trianguloR);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void cmbEquilatero()
         {
-            FormaGeometrica trianguloE = new TE()
+            try
             {
-                Base = Convert.ToDouble(txtBase.Text),
-            };
-            cmbObjetos.Items.Add(trianguloE);
+                FormaGeometrica trianguloE = new TE()
+                {
+                    Base = Convert.ToDouble(txtBase.Text),
+                };
+                cmbObjetos.Items.Add(trianguloE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void cmbIsosceles()
         {
-            FormaGeometrica trianguloI = new TI()
+            try
             {
-                Base = Convert.ToDouble(txtBase.Text),
-                Altura = Convert.ToDouble(txtAltura.Text),
-            };
-            cmbObjetos.Items.Add(trianguloI);
+                FormaGeometrica trianguloI = new TI()
+                {
+                    Base = Convert.ToDouble(txtBase.Text),
+                    Altura = Convert.ToDouble(txtAltura.Text),
+                };
+                cmbObjetos.Items.Add(trianguloI);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnQuadrado()
         {
-            if (cmbForma.Text.Equals("Quadrado"))
+            try
             {
-                FormaGeometrica quadrado = new Quadrado()
+                if (cmbForma.Text.Equals("Quadrado"))
                 {
-                    Base = Convert.ToDouble(txtBase.Text)
-                };
-                cmbObjetos.Items.Add(quadrado);
+                    FormaGeometrica quadrado = new Quadrado()
+                    {
+                        Base = Convert.ToDouble(txtBase.Text)
+                    };
+                    cmbObjetos.Items.Add(quadrado);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         private void btnCircunferencia()
         {
-            if (cmbForma.Text.Equals("Circunferencia"))
+            try
             {
-                FormaGeometrica circunferencia = new Circunferencia()
+                if (cmbForma.Text.Equals("Circunferencia"))
                 {
-                    Raio = Convert.ToDouble(txtRaio.Text)
-                };
-                cmbObjetos.Items.Add(circunferencia);
+                    FormaGeometrica circunferencia = new Circunferencia()
+                    {
+                        Raio = Convert.ToDouble(txtRaio.Text)
+                    };
+                    cmbObjetos.Items.Add(circunferencia);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnRetangulo()
         {
-            if (cmbForma.Text.Equals("Retangulo"))
+            try
             {
-                FormaGeometrica retangulo = new Retangulo()
+                if (cmbForma.Text.Equals("Retangulo"))
                 {
-                    Base = Convert.ToDouble(txtBase.Text),
-                    Altura = Convert.ToDouble(txtAltura.Text)
-                };
-                cmbObjetos.Items.Add(retangulo);
+                    FormaGeometrica retangulo = new Retangulo()
+                    {
+                        Base = Convert.ToDouble(txtBase.Text),
+                        Altura = Convert.ToDouble(txtAltura.Text)
+                    };
+                    cmbObjetos.Items.Add(retangulo);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro:\n" + ex.Message, "Atenção:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void cmbObjetos_SelectedIndexChanged(object sender, EventArgs e)
