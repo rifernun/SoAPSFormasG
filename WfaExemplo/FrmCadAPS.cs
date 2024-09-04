@@ -23,19 +23,30 @@ namespace WfaExemplo
             {
                 case "Quadrado":
                     SelecionarQuadrado();
+                    LimparCampos();
                     break;
                 case "Triangulo":
                     SelecionarTriangulo();
+                    LimparCampos();
                     break;
                 case "Circunferencia":
                     SelecionarCircunferencia();
+                    LimparCampos();
                     break;
                 case "Retangulo":
                     SelecionarRetangulo();
+                    LimparCampos();
                     break;
                 default:
                     break;
             }
+        }
+
+        private void LimparCampos()
+        {
+            txtBase.Text = "";
+            txtAltura.Text = "";
+            txtRaio.Text = "";
         }
 
         private void SelecionarQuadrado()
@@ -241,11 +252,11 @@ namespace WfaExemplo
             switch (cmbTriangulo.Text)
             {
                 case "Equilatero":
-                    ExibirAltura(false); ExibirBase(true); break;
+                    ExibirAltura(false); ExibirBase(true); LimparCampos(); break; 
                 case "Isosceles":
-                    ExibirAltura(true); ExibirBase(true); break;
+                    ExibirAltura(true); ExibirBase(true); LimparCampos(); break;
                 case "Reto":
-                    ExibirAltura(true); ExibirBase(true); break;
+                    ExibirAltura(true); ExibirBase(true); LimparCampos(); break;
             }
         }
 
